@@ -1,0 +1,24 @@
+// SOLUTION: Add these exact lines to OrdersScreen.tsx
+
+// 1. ADD THIS IMPORT (after line 12, before "import { useTheme }"):
+import { useFocusEffect } from '@react-navigation/native';
+
+// 2. ADD THIS CODE (after line 66, after the onRefresh function):
+
+  // Refetch orders when screen comes into focus
+  useFocusEffect(
+    useCallback(() => {
+      console.log('📱 [Orders Screen] Screen focused, fetching orders...');
+      if (employeeId) {
+        getOrders({
+          employee_id: employeeId,
+          order_date: formattedDate,
+        });
+      }
+    }, [employeeId, formattedDate, getOrders])
+  );
+
+// This will:
+// - Run every time you navigate to the Orders screen
+// - Fetch fresh data from the API
+// - Show console log to confirm it's working

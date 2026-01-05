@@ -1,6 +1,57 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Grand Central Backery and Kitchen
 
-# Getting Started
+A production-ready React Native e-commerce mobile application for Grand Central Backery and Kitchen, built with TypeScript, Redux Toolkit, and Laravel backend integration.
+
+## 📱 Project Overview
+
+This app provides a complete e-commerce solution featuring:
+
+- Product browsing and search
+- Shopping cart management
+- Secure checkout and payments (Stripe integration)
+- User authentication and profile management
+- Order history and tracking
+- Bilingual support (English/Arabic with RTL)
+- Offline-first capabilities
+
+## 🏗️ Architecture
+
+### Tech Stack
+
+- **Framework**: React Native 0.82.1
+- **Language**: TypeScript 5.8
+- **State Management**: Redux Toolkit + RTK Query
+- **Navigation**: React Navigation v6
+- **HTTP Client**: Axios
+- **UI Components**: React Native Paper (planned)
+- **Forms**: Formik + Yup
+- **Localization**: i18next + react-i18next
+- **Storage**: AsyncStorage + Keychain (secure)
+- **Payment**: Stripe React Native SDK
+
+### Project Structure
+
+```
+src/
+├── assets/          # Images, fonts, icons
+├── components/      # Shared components
+│   └── common/      # Reusable UI components
+├── config/          # App configuration
+├── features/        # Feature-based modules
+│   ├── Auth/
+│   ├── Products/
+│   ├── Cart/
+│   ├── Checkout/
+│   └── Profile/
+├── i18n/            # Translation files
+├── navigation/      # Navigation setup
+├── services/        # API client, external services
+├── state/           # Redux store
+├── types/           # TypeScript definitions
+└── utils/           # Utility functions
+```
+
+## 🚀 Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
